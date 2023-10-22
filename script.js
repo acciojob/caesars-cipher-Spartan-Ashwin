@@ -35,7 +35,19 @@ function rot13(encodedStr) {
   let decodedArr = []; // Your Result goes here
   // Only change code below this line
 
-  return; //return decodedArr
+	for(let i=0;i<encodedStr.length;i++){
+		let str=encodedStr[i];
+		if(lookup[str]!=undefinded){
+			decodedArr[i]+=lookup[str];
+		}else{
+			decodedArr[i]=str;
+		}
+	}
+	
+
+  return decodedArr;
+
+	
 }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
